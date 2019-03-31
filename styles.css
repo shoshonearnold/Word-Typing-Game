@@ -1,0 +1,12 @@
+button {
+  padding: 13px 22px;
+  text-align: center;
+  border: 2px solid;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3b3c42; /* Green */
+  color: white;
+}
