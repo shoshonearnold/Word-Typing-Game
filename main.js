@@ -1,12 +1,10 @@
-window.addEventListener('load', init);
-
 //Globals
 
 // Availible Levels
 const levels = {
-	easy: 6,
-	medium: 4,
-	hard: 2,
+	easy: 8,
+	medium: 5,
+	hard: 3,
 };
 
 // To change Level
@@ -23,6 +21,12 @@ const ScoreDisplay = document.querySelector('#score');
 const timeDisplay = document.querySelector('#time');
 const message = document.querySelector('#message');
 const seconds = document.querySelector('#seconds');
+const startGame = document.querySelector('#startgame');
+const restartGame = document.querySelector('#restart-page');
+
+startGame.addEventListener('click', init);
+restartGame.addEventListener('click', refresh);
+
 
 const words = [
 	'fun',
@@ -53,16 +57,11 @@ const words = [
 ];
 
 //Initialize Game
-function init() {
-	// Show number of seconds in UI
+function init(e) {
 	seconds.innerHTML = currentLevel;
-	//load word from array
 	showWord(words);
-	// Start matching on word input
 	wordInput.addEventListener('input', startMatch);
-	// Call countdown every Second
 	setInterval(countdown, 1000);
-	// Check game status
 	setInterval(checkStatus, 50);
 }
 
@@ -75,8 +74,6 @@ function startMatch() {
 		wordInput.value ='';
 		score++;
 	}
-
-	// if score is -1, display 0
 	if (score === -1) {
 		scoreDisplay.innerHTML = 0;
 	} else {
@@ -110,7 +107,6 @@ function countdown() {
 	// Decrement
 	time--;	
 	} else if (time === 0) {
-		//Game is over
 		isPlaying = false;
 	}
 	 // Show time
@@ -124,3 +120,8 @@ function checkStatus() {
 		score = -1;
 	}
 }
+
+function refresh() {
+	window.location.reload(true);
+}
+
