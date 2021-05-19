@@ -1,12 +1,27 @@
-# Word-Typing-Game V 1.0.2
-a game where you score points by typing the word in 6 seconds
+# Word-Typing-game
+A game where you score points by typing the word in a given amount of seconds.
 
-very simple project- still doesnt have buttons to change modes
+## Release V 1.0.3 -  CSS/JS Update!
+html:
+```
+    - Deleted icons from file.
+```
 
-Update V1.0.2 ETA 4/31/2019
- - Working on buttons to initialize game
- 
- Update V 1.0.2  ~ 4/22/2019
- 
- - added buttons to start & refresh game.
- - added footer with links to homepages.
+scss/css:
+```
+    - Updated colors for a more appealing UI.
+    - Updated footer.
+```     
+js:
+```
+    - Changed visability of input to type word if game isnt started.
+    - Removed imports.
+
+``` 
+
+## What to expect next?
+```
+    Working buttons to show scores!
+    Responsive UI updates for mobile users!
+    More bugs to squash!
+```

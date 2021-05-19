@@ -8,7 +8,7 @@
 
 .window {
   color: #ffffff;
-  background-color: #da4a75;
+  background-color: #79BCB8;
   padding-top: 0;
   text-decoration: #ffffff;
 }
@@ -20,10 +20,11 @@
 
 .main {
   text-decoration-color: #ff91b2;
-  background-color: #47b889;
+  background-color: #5EC2B7;
   margin: 0;
   padding: 1rem;
-  border-bottom: 2px solid #ff2cd1;
+  border-bottom: 2px solid #2CA6A4;
+  box-shadow: 0 4px 8px 0 #979797;
 }
 
 .initgame {
@@ -34,7 +35,7 @@
   padding-top: 25px;
 } 
 
-.input {
+#input {
   margin-top: 2rem;
 }
 
@@ -51,16 +52,20 @@
 }
 
 button {
-  padding: 13px 22px;
+  margin: 1em auto;
   text-align: center;
-  border: 2px solid;
-  border-radius: 12px;
-  cursor: pointer;
+  width: 15%;
+  border: none;
+  box-shadow: 0 4px 8px 0 #979797;
+  border-radius: 8px;
+  padding: .5em;
 }
 
 button:hover {
-  background-color: #3b3c42; 
-  color: white;
+  cursor: pointer;
+  background-color: #EAE1DF;
+  box-shadow: 0 6px 16px 0 #979797;
+  transition: ease-in .1s;
 }
 
 i {
@@ -74,24 +79,25 @@ i:hover {
   color: #5d5e60; 
 }
 
+
 #textcss {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .signature {
-  margin-top: 65px;
-	text-align: center;
+  padding-top: 5em;
+  text-align: center;
   color: #000000;
 }
 
 #my-name a{
-  color: #ffffff;
+  color: #000000;
   text-decoration: none;
 }
 
 #my-name a:hover {
-	color: #21a867;
-	transition: .2s ease-out;
+  color: #b1eb2c;
+  transition: .2s ease-out;
 }
 
 

@@ -1,19 +1,19 @@
-//Globals
 
-
-// Availible Levels
 const levels = {
 	easy: 8,
 	medium: 5,
 	hard: 3,
 };
 
-// To change Level
 const currentLevel = levels.easy;
 
+
+let startingTime = countDownTime;
 let time = currentLevel;
 let scoreDisplay = 0;
 let isPlaying; 
+let isInputShown = document.getElementById("input").style.visibility = "hidden";
+
 
 //DOM Elements 
 const wordInput = document.querySelector('#word-input');
@@ -56,8 +56,8 @@ const words = [
 	'equipment',
 ];
 
-//Initialize Game
 function init(e) {
+	isInputShown = document.getElementById("input").style.visibility = "visible";
 	seconds.innerHTML = currentLevel;
 	showWord(words);
 	wordInput.addEventListener('input', startMatch);
@@ -65,7 +65,6 @@ function init(e) {
 	setInterval(checkStatus, 50);
 }
 
-// Start match
 function startMatch() {
 	if(matchWords()) {
 		isPlaying = true;
@@ -75,7 +74,6 @@ function startMatch() {
 	}
 }
 
-// Match currentWord to wordImput
 function matchWords() {
 	if (wordInput.value === currentWord.innerHTML) {
 			message.innerHTML = 'correct!!!';
@@ -86,28 +84,20 @@ function matchWords() {
 		}
 }
 
-//Pick and show random Word
 function showWord(words) {
-	// Generate random array index
 	const randIndex = Math.floor(Math.random() * words.length);
-	// Outpost ransom word
 	currentWord.innerHTML = words[randIndex];
 }
 
-//countdown Timer
 function countdown() {
-	// Make Sure Time Is Not Run Out
 	if(time > 0 ) {
-	// Decrement
 	time--;	
 	} else if (time === 0) {
 		isPlaying = false;
 	}
-	 // Show time
-	 timeDisplay.innerHTML = time;
+	timeDisplay.innerHTML = time;
 }
 
-// Check game status
 function checkStatus() {
 	if (!isPlaying && time === 0) {
 		message.innerHTML = 'Game Over!!! Click Play Again.';
