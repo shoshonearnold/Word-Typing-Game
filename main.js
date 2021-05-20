@@ -8,11 +8,10 @@ const levels = {
 const currentLevel = levels.easy;
 
 
-let startingTime = countDownTime;
 let time = currentLevel;
 let scoreDisplay = 0;
-let isPlaying; 
-let isInputShown = document.getElementById("input").style.visibility = "hidden";
+let isPlaying;
+document.getElementById("input").style.visibility = "hidden"; 
 
 
 //DOM Elements 
@@ -57,7 +56,7 @@ const words = [
 ];
 
 function init(e) {
-	isInputShown = document.getElementById("input").style.visibility = "visible";
+	document.getElementById("input").style.visibility = "visible";
 	seconds.innerHTML = currentLevel;
 	showWord(words);
 	wordInput.addEventListener('input', startMatch);
